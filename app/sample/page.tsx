@@ -217,10 +217,10 @@ export default function SamplePage() {
         <div>
           <p className="label">The landing page copy</p>
           <h2 className="heading-sub mb-24">
-            Labelled blocks, ready to place
+            Labeled blocks, ready to place
           </h2>
           <p className="body-sm">
-            Headline, intro, proof, form copy and button text. Delivered as a document with each block labelled, so
+            Headline, intro, proof, form copy and button text. Delivered as a document with each block labeled, so
             whoever runs your website can place it without a briefing.
           </p>
         </div>

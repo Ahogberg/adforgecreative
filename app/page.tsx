@@ -41,7 +41,7 @@ const outputs = [
     'landing page',
     'Conversion',
     'Landing page copy',
-    'Headline, intro, proof and form copy, labelled so whoever runs your website can place it.',
+    'Headline, intro, proof and form copy, labeled so whoever runs your website can place it.',
   ],
 ];
 
@@ -76,12 +76,12 @@ const testimonials = [
   [
     '[Client quote goes here once the first founding month has shipped. Keep it in their words, two or three sentences.]',
     'Managing partner',
-    '11-person advisory firm, London',
+    '11-person advisory firm, Chicago',
   ],
   [
     '[Second client quote. Ideally about something specific: the review link, the timestamps, how the guide was received.]',
-    'Head of programmes',
-    'Leadership training company, Amsterdam',
+    'Head of programs',
+    'Leadership training company, Denver',
   ],
   ['[Third client quote. A short one works well here.]', 'Founder', 'Boutique pricing consultancy, Boston'],
 ];

@@ -25,7 +25,13 @@ The site deliberately sells accountable delivery rather than access to AI. It ex
 | `/kit` | Internal production standard. Not linked from the site, `noindex`. |
 
 `public/emails/application-confirmation.html` is the send-ready confirmation email
-(table-based, inline styles). Merge fields: `{{first_name}}`, `{{company}}`, `{{source_type}}`.
+(table-based, inline styles). Merge fields: `{{first_name}}`, `{{company}}`,
+`{{source_type}}`, `{{sender_address}}`.
+
+`{{sender_address}}` is the sender's legal entity and postal address. It has no default
+on purpose — the confirmation is a transactional message, but the three nurture emails
+the service sells are commercial, and those need a real postal address in the footer.
+Populate it at send time rather than hardcoding one here.
 
 ## Design
 
@@ -50,6 +56,9 @@ When `NEXT_PUBLIC_ADFORGE_API_URL` points to a deployed production engine, the a
 npm run lint
 npm run build
 ```
+
+Copy is US English throughout, and the guide format defaults to US Letter. The A4 layout
+in the Claude Design guide template still needs re-laying out to Letter.
 
 The Open Graph image at `public/og.png` is still AdForge-branded and needs redesigning for
 the new name. The previous static site is preserved under `legacy/index.html` for reference.

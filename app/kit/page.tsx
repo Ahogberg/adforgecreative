@@ -16,7 +16,7 @@ const contents = [
 ];
 
 const guidePages = [
-  ['1', 'Cover', 'Client colour block. Title, audience line, page count and reading time, source date.'],
+  ['1', 'Cover', 'Client color block. Title, audience line, page count and reading time, source date.'],
   [
     '2',
     'Contents + origin',
@@ -28,7 +28,7 @@ const guidePages = [
     'The problem in three paragraphs and one pull quote with a timestamp. No history of the firm.',
   ],
   ['4', 'Chapter 1', 'The core idea, named. Ends with a short list of what it looks like in practice.'],
-  ['5', 'Numbers page', 'Client colour block. Four figures maximum, each with one sentence. Source line at the bottom.'],
+  ['5', 'Numbers page', 'Client color block. Four figures maximum, each with one sentence. Source line at the bottom.'],
   ['6', 'Decision / step 1', 'What to do, why, and the test for whether it worked. Points to the template page.'],
   [
     '7',
@@ -76,7 +76,7 @@ const tree = `northstar_2026-10/
 ├── 03_emails/
 │   └── emails_01-03.txt            subject, preview, send-day, body
 ├── 04_landing-page/
-│   └── landing-page-copy.docx      five labelled blocks
+│   └── landing-page-copy.docx      five labeled blocks
 └── 05_sources/
     └── claims-and-timestamps.csv   every claim, its piece, its minute`;
 
@@ -112,7 +112,7 @@ export default function KitPage() {
           <p className="label">1. The guide</p>
           <h2 className="heading-sub mb-24">Twelve pages, always in the same order</h2>
           <p className="body-sm mb-24">
-            A5 or A4 portrait, in the client&apos;s typeface and colour. One idea, three to five sections, one template
+            US Letter portrait, or A4 for clients outside the US, in the client&apos;s typeface and color. One idea, three to five sections, one template
             page the reader can use tomorrow. Timestamps in the margin on every claim.
           </p>
         </div>
@@ -257,7 +257,7 @@ export default function KitPage() {
                   Nobody decided that. It happened because the account team was handed a number, not a reason.
                 </p>
                 <span className="anatomy-note">
-                  Body: 120 to 180 words. Two to four paragraphs. One idea from the guide, developed, not summarised.
+                  Body: 120 to 180 words. Two to four paragraphs. One idea from the guide, developed, not summarized.
                 </span>
               </div>
               <div>
@@ -290,7 +290,7 @@ export default function KitPage() {
         <div className="container section-sub kit-package">
           <div>
             <p className="label">4. Landing page copy</p>
-            <h2 className="heading-sub mb-24">Five labelled blocks</h2>
+            <h2 className="heading-sub mb-24">Five labeled blocks</h2>
             <p className="body-sm mb-32">
               Delivered as a document, one block per heading, so whoever runs the client&apos;s website can place it
               without a briefing. We do not design the page; we write it.
