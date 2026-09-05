@@ -1,6 +1,7 @@
 import Link from 'next/link';
+import { siteConfig } from '@/lib/site-config';
 
-export const CONTACT_EMAIL = 'hello@afterword.co';
+export const CONTACT_EMAIL = siteConfig.contactEmail;
 
 export function Wordmark({ href = '/' }: { href?: string }) {
   return (

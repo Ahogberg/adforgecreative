@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SiteFooter, SiteNav } from '@/components/site-chrome';
+import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'How review works — Afterword',
@@ -90,7 +91,7 @@ export default function ReviewPage() {
               <i />
               <i />
             </div>
-            <div className="review-url">review.afterword.co/northstar/october</div>
+            <div className="review-url">review.{siteConfig.domain}/northstar/october</div>
           </div>
 
           <div className="review-body">

@@ -3,6 +3,13 @@
  * when there is one; until then they are edited here.
  */
 export const siteConfig = {
+  /**
+   * Placeholder pending registration — afterword.co is taken. Change this and
+   * `contactEmail` together when the real domain is bought, plus the two
+   * hardcoded references in public/emails/application-confirmation.html.
+   */
+  domain: 'afterword.co',
+  contactEmail: 'hello@afterword.co',
   /** Editor section on the home page (needs the portrait asset to be current). */
   showEditor: true,
   /**
