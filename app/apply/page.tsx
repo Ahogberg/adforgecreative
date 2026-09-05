@@ -19,11 +19,12 @@ export default function ApplyPage() {
       </nav>
       <section className="apply-layout">
         <div className="apply-copy">
-          <p className="eyebrow">Founding membership application</p>
-          <h1>Start with the source.<br /><em>We&apos;ll find the campaign.</em></h1>
+          <p className="eyebrow">Async application · no calendar link</p>
+          <h1>Start without a sales call.<br /><em>We&apos;ll find the campaign.</em></h1>
           <p>
-            Give us the commercial context and one piece of expert material. We review every
-            application personally and reply with the angle we would develop.
+            Give us the commercial context and one piece of expert material. Within 24 hours,
+            we reply by email with the angle we would develop, a clear fit decision, and the
+            payment step if we should work together.
           </p>
           <div className="apply-summary">
             <span>AdForge Monthly</span>
@@ -33,7 +34,13 @@ export default function ApplyPage() {
               <li>Premium guide + 12 distribution assets</li>
               <li>First delivery within 48 hours of complete intake</li>
               <li>One consolidated revision round</li>
+              <li>No discovery or sales meeting required</li>
             </ul>
+          </div>
+          <div className="async-steps" aria-label="How starting works">
+            <span>01</span><p><strong>Apply</strong> with one useful source and your commercial context.</p>
+            <span>02</span><p><strong>Receive</strong> a campaign direction and fit decision by email.</p>
+            <span>03</span><p><strong>Approve and pay</strong>; production begins when intake is complete.</p>
           </div>
         </div>
         <ApplicationForm apiUrl={process.env.NEXT_PUBLIC_ADFORGE_API_URL ?? ''} />

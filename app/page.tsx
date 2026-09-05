@@ -53,7 +53,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><Sparkles size={14} /> Content operations for expert-led B2B</p>
+          <p className="eyebrow"><Sparkles size={14} /> Three founding memberships · September</p>
           <h1>
             One expert session.<br />
             <em>One month of content.</em>
@@ -64,11 +64,11 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/apply">
-              Apply for a founding spot <ArrowRight size={16} />
+              Start without a sales call <ArrowRight size={16} />
             </Link>
             <a className="button button-secondary" href="#system">See the system</a>
           </div>
-          <p className="hero-note">No prompt writing. No blank documents. One review round.</p>
+          <p className="hero-note">No sales call. No prompt writing. One focused review round.</p>
         </div>
 
         <aside className="bundle-card" aria-label="Your monthly content bundle">
@@ -232,6 +232,7 @@ export default function Home() {
           <h2>Clear answers.<br /><em>No sales theatre.</em></h2>
         </div>
         <div className="faq-list">
+          <details><summary>Do we need a sales call?</summary><p>No. Apply with a source link and your commercial context. We reply by email with the campaign direction, scope, and payment step. If it fits, you can approve and start without booking a meeting.</p></details>
           <details><summary>What counts as a source asset?</summary><p>A recorded webinar, podcast, workshop, keynote, interview, or presentation with enough original expertise to develop a useful point of view.</p></details>
           <details><summary>Does AI write everything?</summary><p>Automation handles transcription, extraction, first drafts, consistency checks, and production. An editor remains responsible for the narrative, factual flags, and final quality.</p></details>
           <details><summary>Can you match our brand?</summary><p>Yes. We establish a reusable profile from your website, brand files, approved examples, tone, and the decisions you make during review.</p></details>
@@ -245,7 +246,7 @@ export default function Home() {
         <h2>Bring the expertise.<br /><em>We&apos;ll forge the campaign.</em></h2>
         <p>Send a public source link and your company website. We will reply with the angle we would build—not a generic AI sample.</p>
         <Link className="button button-primary" href="/apply">
-          Start with your source <ArrowRight size={16} />
+          Start without a sales call <ArrowRight size={16} />
         </Link>
       </section>
 

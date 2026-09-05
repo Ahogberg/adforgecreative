@@ -10,6 +10,8 @@ export function ApplicationForm({ apiUrl }: { apiUrl: string }) {
     event.preventDefault();
     const form = event.currentTarget;
     const data = new FormData(form);
+    const referral = new URLSearchParams(window.location.search).get('ref') ?? '';
+    if (referral) data.set('referral', referral);
 
     if (!apiUrl) {
       const body = [
@@ -21,8 +23,10 @@ export function ApplicationForm({ apiUrl }: { apiUrl: string }) {
         `Audience: ${field(data, 'audience')}`,
         `Offer: ${field(data, 'offer')}`,
         `CTA: ${field(data, 'callToAction')}`,
+        `Preferred start: ${field(data, 'startTiming')}`,
+        referral ? `Preview reference: ${referral}` : '',
       ].join('\n');
-      window.location.href = `mailto:hello@adforgecreative.com?subject=${encodeURIComponent('AdForge founding membership')}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:hello@adforgecreative.com?subject=${encodeURIComponent('AdForge founding membership application')}&body=${encodeURIComponent(body)}`;
       return;
     }
 
@@ -63,13 +67,15 @@ export function ApplicationForm({ apiUrl }: { apiUrl: string }) {
       <label>Who should this campaign help?<textarea name="audience" required minLength={3} placeholder="Operations leaders at 50–500 person professional-services firms" /></label>
       <label>What do you sell?<textarea name="offer" required minLength={3} placeholder="The offer and the business problem it solves" /></label>
       <label>What should the reader do next?<input name="callToAction" required minLength={3} placeholder="Book a 30-minute assessment" /></label>
+      <label>Preferred start<select name="startTiming" defaultValue="this-month"><option value="this-month">This month</option><option value="next-month">Next month</option><option value="exploring">Just exploring</option></select></label>
       <label>Voice notes <small>Optional</small><textarea name="toneNotes" placeholder="Direct, evidence-led, warm; avoid hype" /></label>
+      <label className="form-confirm"><input name="priceConfirmed" type="checkbox" required /><span>I understand the founding membership is $1,500/month. This application does not take payment.</span></label>
       <input type="hidden" name="primaryColor" value="#E8C97A" />
       <button className="button button-primary form-submit" disabled={state === 'sending'}>
-        {state === 'sending' ? 'Submitting…' : 'Submit application'}
+        {state === 'sending' ? 'Submitting…' : apiUrl ? 'Submit application' : 'Open email application'}
       </button>
       {message && <output className={`form-message ${state}`}>{message}</output>}
-      <p className="form-fineprint">Prefer email? Write to <a href="mailto:hello@adforgecreative.com">hello@adforgecreative.com</a>.</p>
+      <p className="form-fineprint">We reply within 24 hours. No sales call required. Prefer a blank email? Write to <a href="mailto:hello@adforgecreative.com">hello@adforgecreative.com</a>.</p>
     </form>
   );
 }
