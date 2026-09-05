@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: 'AdForge — One expert session. One month of content.',
   description:
     'A productized content service for expert-led B2B companies. Turn one webinar, podcast, workshop, or keynote into a publication-ready campaign in 48 hours.',
+  icons: { icon: '/favicon.svg' },
   openGraph: {
     title: 'AdForge — One expert session. One month of content.',
     description: 'Publication-ready B2B content from one expert source, delivered in 48 hours.',
