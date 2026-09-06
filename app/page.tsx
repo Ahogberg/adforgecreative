@@ -1,4 +1,4 @@
-import Image from 'next/image';
+/* oxlint-disable next/no-img-element -- vinext's next/image shim currently throws during client hydration */
 import Link from 'next/link';
 import { Check } from 'lucide-react';
 import { MainNav, SiteFooter } from './site-chrome';
@@ -77,11 +77,11 @@ export default function Home() {
       </div></section>
 
       <section className="editor-section container">
-        <div className="editor-photo"><Image src="/editor-portrait.webp" alt="Andreas, founder and editor at Afterword" fill sizes="(max-width: 900px) 100vw, 40vw" priority={false} /><div><strong>Andreas, editor</strong><span>The same person every month</span></div></div>
+        <div className="editor-photo"><img src="/editor-portrait.webp" alt="Andreas, founder and editor at Afterword" /><div><strong>Andreas, editor</strong><span>The same person every month</span></div></div>
         <div><h2>Why not just use ChatGPT?</h2><p className="editor-lede">You could, and you would get drafts. We use AI for transcription, extraction, and first passes too. The difference is that one editor reads all of it, checks every claim, fixes the argument, and signs off before you see anything. Your job is to approve, not to manage.</p><div className="difference-grid">{differences.map(([title, text]) => <article key={title}><h3>{title}</h3><p>{text}</p></article>)}</div></div>
       </section>
 
-      <section className="founder-note paper-two"><div className="container"><p className="section-label">A note from the founder</p><div><p>I started Afterword because I kept watching small firms give a genuinely good hour of talk to forty people, and then never use it again. The recording sat in a folder. The insight went nowhere.</p><p>This is a small service on purpose. I take a few clients, read every word before it goes out, and would rather turn down a project than hand over something I would not publish myself.</p><div className="signature"><Image src="/editor-portrait.webp" alt="" width={44} height={44} /><span><strong>Andreas Högberg</strong><small>Founder and editor, Afterword</small></span></div></div></div></section>
+      <section className="founder-note paper-two"><div className="container"><p className="section-label">A note from the founder</p><div><p>I started Afterword because I kept watching small firms give a genuinely good hour of talk to forty people, and then never use it again. The recording sat in a folder. The insight went nowhere.</p><p>This is a small service on purpose. I take a few clients, read every word before it goes out, and would rather turn down a project than hand over something I would not publish myself.</p><div className="signature"><img src="/editor-portrait.webp" alt="" width="44" height="44" /><span><strong>Andreas Högberg</strong><small>Founder and editor, Afterword</small></span></div></div></div></section>
 
       <section className="pricing" id="pricing"><div className="container pricing-grid">
         <div><p className="section-label">Founding membership</p><h2>One plan, one price, no open-ended retainer</h2><p>One recording a month. The scope is fixed, so there are no hours to track and nothing to negotiate. Anything outside it is quoted before we start.</p><div className="addons"><div><span>Additional source asset</span><b>+$950</b></div><div><span>Publishing and integrations</span><b>Quoted</b></div></div></div>
