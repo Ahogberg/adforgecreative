@@ -1,6 +1,6 @@
-# AdForge Creative
+# Afterword
 
-The public site for AdForge Monthly: a $1,500/month productized content service for expert-led B2B companies.
+The public site for Afterword Monthly: a $1,500/month productized editorial service for expert-led B2B companies. The repository keeps its original `adforgecreative` name.
 
 ## Positioning
 
@@ -28,4 +28,4 @@ npm run lint
 npm run build
 ```
 
-The generated Open Graph image lives at `public/og.png`. The previous static site is preserved under `legacy/index.html` for reference.
+The generated Open Graph image lives at `public/og.png`. The previous static site is preserved under `legacy/index.html` for reference. Brand name, contact email, and canonical URL are centralized in `lib/brand.ts`.

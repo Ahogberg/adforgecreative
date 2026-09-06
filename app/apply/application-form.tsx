@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, type SyntheticEvent } from 'react';
+import { useRouter } from 'next/navigation';
 
-export function ApplicationForm({ apiUrl }: { apiUrl: string }) {
-  const [state, setState] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+export function ApplicationForm({ apiUrl, contactEmail }: { apiUrl: string; contactEmail: string }) {
+  const router = useRouter();
+  const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle');
   const [message, setMessage] = useState('');
 
   async function submit(event: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
@@ -26,7 +28,7 @@ export function ApplicationForm({ apiUrl }: { apiUrl: string }) {
         `Preferred start: ${field(data, 'startTiming')}`,
         referral ? `Preview reference: ${referral}` : '',
       ].join('\n');
-      window.location.href = `mailto:hello@adforgecreative.com?subject=${encodeURIComponent('AdForge founding membership application')}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent('Afterword founding membership application')}&body=${encodeURIComponent(body)}`;
       return;
     }
 
@@ -36,9 +38,8 @@ export function ApplicationForm({ apiUrl }: { apiUrl: string }) {
       const response = await fetch(`${apiUrl.replace(/\/$/, '')}/api/intake`, { method: 'POST', body: data });
       if (!response.ok) throw new Error('We could not submit the application.');
       const result = await response.json() as { projectId: string };
-      setState('sent');
-      setMessage(`Application received. Reference ${result.projectId.slice(0, 8)}. We will reply by email.`);
-      form.reset();
+      const email = field(data, 'contactEmail');
+      router.push(`/thank-you?email=${encodeURIComponent(email)}&ref=${encodeURIComponent(result.projectId.slice(0, 8))}`);
     } catch (error) {
       setState('error');
       setMessage(error instanceof Error ? error.message : 'Something went wrong. Please email us instead.');
@@ -48,7 +49,7 @@ export function ApplicationForm({ apiUrl }: { apiUrl: string }) {
   return (
     <form className="application-form" onSubmit={submit}>
       <div className="form-heading">
-        <span>01 / Application</span>
+        <span>Your application</span>
         <h2>Tell us what you know.</h2>
         <p>No polished brief required. A useful source and a real offer are enough.</p>
       </div>
@@ -70,12 +71,12 @@ export function ApplicationForm({ apiUrl }: { apiUrl: string }) {
       <label>Preferred start<select name="startTiming" defaultValue="this-month"><option value="this-month">This month</option><option value="next-month">Next month</option><option value="exploring">Just exploring</option></select></label>
       <label>Voice notes <small>Optional</small><textarea name="toneNotes" placeholder="Direct, evidence-led, warm; avoid hype" /></label>
       <label className="form-confirm"><input name="priceConfirmed" type="checkbox" required /><span>I understand the founding membership is $1,500/month. This application does not take payment.</span></label>
-      <input type="hidden" name="primaryColor" value="#E8C97A" />
+      <input type="hidden" name="primaryColor" value="#1F4D3A" />
       <button className="button button-primary form-submit" disabled={state === 'sending'}>
-        {state === 'sending' ? 'Submitting…' : apiUrl ? 'Submit application' : 'Open email application'}
+        {state === 'sending' ? 'Sending…' : apiUrl ? 'Send application' : 'Open email application'}
       </button>
       {message && <output className={`form-message ${state}`}>{message}</output>}
-      <p className="form-fineprint">We reply within 24 hours. No sales call required. Prefer a blank email? Write to <a href="mailto:hello@adforgecreative.com">hello@adforgecreative.com</a>.</p>
+      <p className="form-fineprint">We reply within 24 hours. No sales call required. Prefer a blank email? Write to <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.</p>
     </form>
   );
 }
