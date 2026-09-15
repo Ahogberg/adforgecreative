@@ -42,13 +42,15 @@ export function SiteFooter({ note }: { note?: string }) {
     <footer className="site-footer">
       <div className="container footer-inner">
         <Wordmark />
-        {note ? <p>{note}</p> : (
+        <div className="footer-center">
+          {note && <p>{note}</p>}
           <div className="footer-links">
             <Link href="/sample">Sample month</Link>
             <Link href="/review">How review works</Link>
             <Link href="/apply">Apply</Link>
+            <Link href="/privacy">Privacy</Link>
           </div>
-        )}
+        </div>
         <a className="contact-link" href={`mailto:${brand.contactEmail}`}>{brand.contactEmail}</a>
       </div>
     </footer>

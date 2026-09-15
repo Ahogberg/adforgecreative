@@ -159,6 +159,7 @@ h2 { margin: 0; font-size: clamp(36px, 3.8vw, 56px); line-height: 1.08; letter-s
 .site-footer { border-top: 1px solid rgba(28, 27, 24, .12); }
 .footer-inner { min-height: 108px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--muted); font-size: 14px; }
 .footer-inner .wordmark { font-size: 20px; }
+.footer-center { display: grid; justify-items: center; gap: 10px; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 24px; }
 .footer-inner p { margin: 0; text-align: center; }
 
@@ -303,6 +304,16 @@ h2 { margin: 0; font-size: clamp(36px, 3.8vw, 56px); line-height: 1.08; letter-s
 .confirmation-card h2 { margin: 20px 0; font-size: 32px; }
 .confirmation-card p { color: var(--ink-3); line-height: 1.65; }
 .confirmation-meta { margin-top: 26px; padding-top: 20px; display: grid; gap: 8px; border-top: 1px solid var(--rule); font-size: 14px; }
+
+/* Privacy */
+.legal-page { max-width: 860px; padding-block: 72px 110px; }
+.legal-updated { margin: 0 0 44px; color: var(--muted-2); font-size: 14px; }
+.legal-page section { padding-block: 28px; border-top: 1px solid var(--rule); }
+.legal-page h2 { margin: 0 0 16px; font-size: clamp(24px, 2.4vw, 34px); }
+.legal-page p, .legal-page li { color: var(--ink-3); font-size: 16px; line-height: 1.72; }
+.legal-page p { margin: 0 0 14px; }
+.legal-page ul { margin: 0 0 16px; padding-left: 22px; }
+.legal-page a { color: var(--forest); text-decoration: underline; text-underline-offset: 3px; }
 
 @media (max-width: 1000px) {
   .review-grid { grid-template-columns: 190px minmax(0, 1fr); }
