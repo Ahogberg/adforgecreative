@@ -25,6 +25,8 @@ export function ApplicationForm({ apiUrl, contactEmail }: { apiUrl: string; cont
         `Audience: ${field(data, 'audience')}`,
         `Offer: ${field(data, 'offer')}`,
         `CTA: ${field(data, 'callToAction')}`,
+        `Expert: ${field(data, 'expertName')}`,
+        `Voice examples:\n${field(data, 'voiceExamples').slice(0, 1200)}`,
         `Preferred start: ${field(data, 'startTiming')}`,
         referral ? `Preview reference: ${referral}` : '',
       ].join('\n');
@@ -69,6 +71,8 @@ export function ApplicationForm({ apiUrl, contactEmail }: { apiUrl: string; cont
       <label>What do you sell?<textarea name="offer" required minLength={3} placeholder="The offer and the business problem it solves" /></label>
       <label>What should the reader do next?<input name="callToAction" required minLength={3} placeholder="Book a 30-minute assessment" /></label>
       <label>Preferred start<select name="startTiming" defaultValue="this-month"><option value="this-month">This month</option><option value="next-month">Next month</option><option value="exploring">Just exploring</option></select></label>
+      <label>Who is the expert in the recording? <small>Optional</small><input name="expertName" placeholder="Maya Chen, Managing Partner" /></label>
+      <label>Three of their own LinkedIn posts <small>Optional, but the best way to get their voice right</small><textarea name="voiceExamples" rows={6} placeholder={'Paste posts they wrote themselves.\n---\nSeparate posts with a line of three dashes.'} /></label>
       <label>Voice notes <small>Optional</small><textarea name="toneNotes" placeholder="Direct, evidence-led, warm; avoid hype" /></label>
       <label className="form-confirm"><input name="priceConfirmed" type="checkbox" required /><span>I understand the founding membership is $1,500/month. This application does not take payment.</span></label>
       <input type="hidden" name="primaryColor" value="#1F4D3A" />
