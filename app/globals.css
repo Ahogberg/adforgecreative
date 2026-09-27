@@ -190,7 +190,8 @@ h2 { margin: 0; font-size: clamp(36px, 3.8vw, 56px); line-height: 1.08; letter-s
 .application-form input:focus, .application-form select:focus, .application-form textarea:focus { background: var(--card); border-color: var(--forest); box-shadow: 0 0 0 1px var(--forest); }
 .application-form .form-confirm { grid-template-columns: 18px 1fr; align-items: start; gap: 10px; color: var(--ink-3); font-weight: 400; line-height: 1.5; }
 .application-form .form-confirm input { width: 18px; height: 18px; margin-top: 2px; padding: 0; accent-color: var(--forest); }
-.form-message { margin: 14px 0 0; padding: 12px 14px; border: 1px solid #8b4b42; color: #7a382f; font-size: 14px; }
+.form-message { display: block; margin: 14px 0 0; padding: 12px 14px; line-height: 1.5; border: 1px solid #8b4b42; color: #7a382f; font-size: 14px; }
+.form-message a { color: inherit; font-weight: 600; text-decoration: underline; }
 .form-fineprint { margin: 15px 0 0; color: var(--muted-2); font-size: 13px; line-height: 1.5; text-align: center; }
 
 /* Sample */

@@ -19,7 +19,7 @@ npm run dev
 
 The site runs at `http://localhost:3000`. Configure `.env` from `.env.example`.
 
-When `NEXT_PUBLIC_ADFORGE_API_URL` points to a deployed production engine, the application form posts directly to `/api/intake`. Without it, the same form opens a prefilled email so the call to action remains functional before the backend is deployed.
+The application form posts directly to the production engine's `/api/intake` (`NEXT_PUBLIC_ADFORGE_API_URL`, defaulting to the live Railway engine in `lib/brand.ts`). If the engine cannot be reached, the form keeps the answers and offers the same application as a prefilled email.
 
 ## Validation
 

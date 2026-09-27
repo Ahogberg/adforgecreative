@@ -33,7 +33,7 @@ export default function ApplyPage() {
             </ul>
           </div>
         </div>
-        <ApplicationForm apiUrl={process.env.NEXT_PUBLIC_ADFORGE_API_URL ?? ''} contactEmail={brand.contactEmail} />
+        <ApplicationForm apiUrl={brand.apiUrl} contactEmail={brand.contactEmail} />
       </section>
     </main>
   );

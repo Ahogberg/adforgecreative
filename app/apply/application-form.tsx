@@ -7,6 +7,7 @@ export function ApplicationForm({ apiUrl, contactEmail }: { apiUrl: string; cont
   const router = useRouter();
   const [state, setState] = useState<'idle' | 'sending' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  const [fallback, setFallback] = useState('');
 
   async function submit(event: SyntheticEvent<HTMLFormElement, SubmitEvent>) {
     event.preventDefault();
@@ -15,36 +16,28 @@ export function ApplicationForm({ apiUrl, contactEmail }: { apiUrl: string; cont
     const referral = new URLSearchParams(window.location.search).get('ref') ?? '';
     if (referral) data.set('referral', referral);
 
+    const mailto = mailtoLink(contactEmail, data, referral);
     if (!apiUrl) {
-      const body = [
-        `Company: ${field(data, 'companyName')}`,
-        `Name: ${field(data, 'contactName')}`,
-        `Email: ${field(data, 'contactEmail')}`,
-        `Website: ${field(data, 'website')}`,
-        `Source: ${field(data, 'sourceUrl')}`,
-        `Audience: ${field(data, 'audience')}`,
-        `Offer: ${field(data, 'offer')}`,
-        `CTA: ${field(data, 'callToAction')}`,
-        `Expert: ${field(data, 'expertName')}`,
-        `Voice examples:\n${field(data, 'voiceExamples').slice(0, 1200)}`,
-        `Preferred start: ${field(data, 'startTiming')}`,
-        referral ? `Preview reference: ${referral}` : '',
-      ].join('\n');
-      window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent('Afterword founding membership application')}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
       return;
     }
 
     setState('sending');
     setMessage('');
+    setFallback('');
     try {
       const response = await fetch(`${apiUrl.replace(/\/$/, '')}/api/intake`, { method: 'POST', body: data });
+      if (response.status === 429) throw new Error('Too many applications from this network right now.');
       if (!response.ok) throw new Error('We could not submit the application.');
       const result = await response.json() as { projectId: string };
       const email = field(data, 'contactEmail');
       router.push(`/thank-you?email=${encodeURIComponent(email)}&ref=${encodeURIComponent(result.projectId.slice(0, 8))}`);
     } catch (error) {
+      // Never lose an application: offer the same answers as a prefilled email.
       setState('error');
-      setMessage(error instanceof Error ? error.message : 'Something went wrong. Please email us instead.');
+      const reason = error instanceof TypeError ? 'We could not reach our server.' : error instanceof Error ? error.message : 'Something went wrong.';
+      setMessage(`${reason} Your answers are still here.`);
+      setFallback(mailto);
     }
   }
 
@@ -79,10 +72,28 @@ export function ApplicationForm({ apiUrl, contactEmail }: { apiUrl: string; cont
       <button className="button button-primary form-submit" disabled={state === 'sending'}>
         {state === 'sending' ? 'Sending…' : apiUrl ? 'Send application' : 'Open email application'}
       </button>
-      {message && <output className={`form-message ${state}`}>{message}</output>}
+      {message && <output className={`form-message ${state}`}>{message}{fallback && <> <a href={fallback}>Send it by email instead</a>.</>}</output>}
       <p className="form-fineprint">We reply within 24 hours. No sales call required. Prefer a blank email? Write to <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.</p>
     </form>
   );
+}
+
+function mailtoLink(contactEmail: string, data: FormData, referral: string): string {
+  const body = [
+    `Company: ${field(data, 'companyName')}`,
+    `Name: ${field(data, 'contactName')}`,
+    `Email: ${field(data, 'contactEmail')}`,
+    `Website: ${field(data, 'website')}`,
+    `Source: ${field(data, 'sourceUrl')}`,
+    `Audience: ${field(data, 'audience')}`,
+    `Offer: ${field(data, 'offer')}`,
+    `CTA: ${field(data, 'callToAction')}`,
+    `Expert: ${field(data, 'expertName')}`,
+    `Voice examples:\n${field(data, 'voiceExamples').slice(0, 1200)}`,
+    `Preferred start: ${field(data, 'startTiming')}`,
+    referral ? `Preview reference: ${referral}` : '',
+  ].join('\n');
+  return `mailto:${contactEmail}?subject=${encodeURIComponent('Afterword founding membership application')}&body=${encodeURIComponent(body)}`;
 }
 
 function field(data: FormData, name: string): string {
