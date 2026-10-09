@@ -48,6 +48,7 @@ export function SiteFooter({ note }: { note?: string }) {
             <Link href="/sample">Sample month</Link>
             <Link href="/review">How review works</Link>
             <Link href="/apply">Apply</Link>
+            <Link href="/terms">Terms</Link>
             <Link href="/privacy">Privacy</Link>
           </div>
         </div>
