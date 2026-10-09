@@ -67,7 +67,7 @@ export function ApplicationForm({ apiUrl, contactEmail }: { apiUrl: string; cont
       <label>Who is the expert in the recording? <small>Optional</small><input name="expertName" placeholder="Maya Chen, Managing Partner" /></label>
       <label>Three of their own LinkedIn posts <small>Optional, but the best way to get their voice right</small><textarea name="voiceExamples" rows={6} placeholder={'Paste posts they wrote themselves.\n---\nSeparate posts with a line of three dashes.'} /></label>
       <label>Voice notes <small>Optional</small><textarea name="toneNotes" placeholder="Direct, evidence-led, warm; avoid hype" /></label>
-      <label className="form-confirm"><input name="priceConfirmed" type="checkbox" required /><span>I understand the founding membership is $1,500/month. This application does not take payment.</span></label>
+      <label className="form-confirm"><input name="priceConfirmed" type="checkbox" required /><span>I understand the founding membership is $1,500/month. This application does not take payment. <a href="/terms" target="_blank" rel="noreferrer">Read the terms</a>.</span></label>
       <input type="hidden" name="primaryColor" value="#1F4D3A" />
       <button className="button button-primary form-submit" disabled={state === 'sending'}>
         {state === 'sending' ? 'Sending…' : apiUrl ? 'Send application' : 'Open email application'}
