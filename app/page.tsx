@@ -11,7 +11,7 @@ const steps = [
 ];
 
 const outputs = [
-  ['Authority asset', 'Premium guide', 'An editorial 8–16 page PDF built around one useful idea—not a transcript in disguise.', '12-page guide'],
+  ['Authority asset', 'Premium guide', 'An editorial 8–16 page PDF built around one useful idea—not a transcript in disguise.', '10-page guide'],
   ['Distribution', 'Eight LinkedIn posts', 'Hooks, arguments, stories, and source-backed insights that point back to the guide.', '8 ready posts'],
   ['Nurture', 'Three emails', 'A concise sequence that delivers value, develops the argument, and opens a conversation.', '3-email sequence'],
   ['Conversion', 'Landing page copy', 'Headline, positioning, proof, form copy, and CTA, clearly labelled for your website.', 'Copy blocks'],

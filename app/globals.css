@@ -370,3 +370,30 @@ h2 { margin: 0; font-size: clamp(36px, 3.8vw, 56px); line-height: 1.08; letter-s
   .browser-address { overflow: hidden; white-space: nowrap; }
   .confirmation-card { padding: 28px 22px; }
 }
+
+/* Sample page: real deliverables */
+.guide-showcase { display: grid; grid-template-columns: minmax(240px, .75fr) minmax(0, 1.25fr); gap: clamp(36px, 6vw, 88px); align-items: start; }
+.guide-cover-shot img, .spread-grid img, .slide-strip img, .post-pair > img, .visual-row img, .clip-grid video { display: block; width: 100%; height: auto; border-radius: 4px; box-shadow: 0 18px 44px rgba(60, 50, 30, .16); }
+.guide-cover-shot { display: block; transition: transform .2s ease; }
+.guide-cover-shot:hover { transform: translateY(-3px); }
+.spread-grid { margin-top: 72px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.spread-grid figure, .clip-grid figure { margin: 0; }
+.spread-grid figcaption, .clip-grid figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+.slide-strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 23%); gap: 18px; overflow-x: auto; padding: 6px 2px 28px; scroll-snap-type: x mandatory; }
+.slide-strip img { scroll-snap-align: start; box-shadow: 0 10px 28px rgba(60, 50, 30, .14); }
+.post-pairs { display: grid; gap: 36px; }
+.post-pair { display: grid; grid-template-columns: minmax(220px, .42fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.visual-row { margin-top: 36px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.visual-row img { box-shadow: 0 8px 20px rgba(60, 50, 30, .12); }
+.clip-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 360px)); gap: 28px; }
+.clip-grid video { background: #1c1b18; }
+@media (max-width: 900px) {
+  .guide-showcase, .post-pair { grid-template-columns: 1fr; }
+  .guide-cover-shot { max-width: 360px; }
+  .post-pair > img { max-width: 360px; }
+  .spread-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .slide-strip { grid-auto-columns: 72%; }
+  .visual-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .clip-grid { grid-template-columns: minmax(0, 1fr); max-width: 360px; }
+}
+.pricing.final-cta p { color: rgba(246, 242, 234, .78); }
