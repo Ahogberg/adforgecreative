@@ -47,7 +47,7 @@ export default function TermsPage() {
 
         <section>
           <h2>Price and payment</h2>
-          <p>Your first campaign comes before any payment. We build it from a recording you already have and send you the review link. If you decide to continue, your membership starts and the first month is billed then; if you do not, you owe nothing. This first campaign is offered once per firm, to firms we accept.</p>
+          <p>Your first campaign comes before any payment. We build it from a recording you already have and send you the review link. If you decide to continue, your membership starts and the first month is billed then; if you do not, you owe nothing, and the first campaign stays ours: please do not publish or reuse it. This first campaign is offered once per firm, to firms we accept.</p>
           <p>The founding membership is US$1,500 per month, billed in advance each month through our payment provider. The founding rate stays the same for as long as your membership continues without a break. After the first campaign, production for a month starts once that month’s payment has been received.</p>
           <p>Prices exclude any taxes that apply to you, such as VAT or sales tax, which are added where required.</p>
         </section>
