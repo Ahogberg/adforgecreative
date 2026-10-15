@@ -18,8 +18,8 @@ export default function ApplyPage() {
           <h1>Start without a sales call. We&apos;ll find the campaign.</h1>
           <p>
             Give us the commercial context and one piece of expert material. Within 24 hours,
-            we reply by email with the angle we would develop, a clear fit decision, and the
-            payment step if we should work together.
+            we reply by email with the angle we would develop and a clear fit decision. If it
+            fits, we build your first campaign before you pay anything.
           </p>
           <div className="apply-summary">
             <span>Afterword Monthly</span>
