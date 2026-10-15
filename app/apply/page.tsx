@@ -26,7 +26,8 @@ export default function ApplyPage() {
             <strong>$1,500/month</strong>
             <ul>
               <li>One source asset up to 75 minutes</li>
-              <li>Premium guide + 12 distribution assets</li>
+              <li>Designed guide, 8 posts with visuals, a carousel and motion clips</li>
+              <li>3 emails and landing-page copy</li>
               <li>First delivery within 48 hours of complete intake</li>
               <li>One consolidated revision round</li>
               <li>No discovery or sales meeting required</li>
