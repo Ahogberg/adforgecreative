@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: 'How review works — Afterword', des
 const steps = [
   ['Day 0', 'Intake complete', 'We have the recording, your website, and your application answers. Nothing else is needed from you.'],
   ['Day 1', 'The argument is chosen', 'Your editor picks the one idea worth a guide and sends a two-line direction note.'],
-  ['Day 2', 'Review link sent', 'All thirteen pieces, laid out in your brand, with claims linked to timestamps.'],
+  ['Day 2', 'Review link sent', 'The whole month — guide, posts, visuals, carousel and clips — laid out in your brand, with claims linked to timestamps.'],
   ['Day 3–4', 'Final files', 'Revisions made, finished files delivered, and your decisions saved for next month.'],
 ];
 
