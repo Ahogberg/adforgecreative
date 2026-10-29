@@ -10,13 +10,17 @@ const steps = [
   ['4.', 'Review once, publish', 'You receive one review link. We apply one consolidated revision and deliver finished files.'],
 ];
 
-const outputs: Array<[string, string, string, string, string?]> = [
+// [label, title, text, alt/preview label, image?, preview class when there is no image]
+const outputs: Array<[string, string, string, string, string?, string?]> = [
   ['Authority asset', 'Designed guide', 'An editorial 8–16 page PDF in your brand, built around one useful idea—not a transcript in disguise.', '10-page guide', '/sample/northstar/guide-01.webp'],
   ['Distribution', 'Eight LinkedIn posts', 'Hooks, arguments and source-backed insights in your voice, each with its own designed visual.', '8 posts + visuals', '/sample/northstar/post-01.webp'],
   ['Feed format', 'LinkedIn carousel', 'The guide’s argument as a swipeable document post, ready to upload.', '8-slide carousel', '/sample/northstar/carousel-slide-01.webp'],
   ['Motion', 'Short video clips', 'Animated clips of your key figure and strongest line. Send the video file and we also cut captioned clips of the speaker.', 'Motion clips', '/sample/northstar/figure-clip-01-poster.webp'],
-  ['Nurture', 'Three emails', 'A concise sequence that delivers value, develops the argument, and opens a conversation.', '3-email sequence'],
-  ['Conversion', 'Landing page copy', 'Headline, positioning, proof, form copy, and CTA, clearly labelled for your website.', 'Copy blocks'],
+  ['Editorial judgement', 'Editorial brief', 'The three strongest ideas in your recording, why we chose the angle, and what we left out on purpose.', 'Editorial brief', '/sample/northstar/brief-01.webp'],
+  ['Planning', '30-day publishing plan', 'When each piece goes out, week by week, with a calendar file that adds everything in one click.', 'Publishing plan', '/sample/northstar/brief-02.webp'],
+  ['Pipeline', 'Your back catalogue, mapped', 'When you join, we rank the five past episodes that would make the strongest guides, so the coming months are already planned.', 'Back-catalogue map', undefined, 'preview-5'],
+  ['Nurture', 'Three emails', 'A concise sequence that delivers value, develops the argument, and opens a conversation.', '3-email sequence', undefined, 'preview-3'],
+  ['Conversion', 'Landing page copy', 'Headline, positioning, proof, form copy, and CTA, clearly labelled for your website.', 'Copy blocks', undefined, 'preview-4'],
 ];
 
 const differences = [
@@ -32,10 +36,12 @@ const priceItems = [
   'Eight LinkedIn posts, each with a visual',
   'One LinkedIn carousel',
   'Motion clips, plus captioned speaker clips from video',
+  'An editorial brief and a 30-day publishing plan',
   'Three nurture emails',
   'One landing-page copy package',
   'Brand, source, and layout quality checks',
   'One consolidated revision round',
+  'A map of your back catalogue when you join',
 ];
 
 export default function Home() {
@@ -63,6 +69,7 @@ export default function Home() {
             <li><span>LinkedIn posts <small>· with visuals</small></span><b>8</b></li>
             <li><span>LinkedIn carousel</span><b>1</b></li>
             <li><span>Motion clips</span><b>2+</b></li>
+            <li><span>Editorial brief + 30-day plan</span><b>1</b></li>
             <li><span>Nurture emails</span><b>3</b></li>
             <li><span>Landing-page copy</span><b>1</b></li>
           </ul>
@@ -79,7 +86,7 @@ export default function Home() {
 
       <section className="paper-two" id="output"><div className="container section-pad">
         <div className="section-heading"><div><p className="section-label">What you get each month</p><h2>A month of content, all from the same hour of talking</h2></div><p>Words, visuals and video share one argument, one voice and one design, so it reads like a campaign rather than a pile of posts. <Link className="text-link" href="/sample">Read a sample month →</Link></p></div>
-        <div className="output-grid">{outputs.map(([label, title, text, preview, image], index) => <article className="output-card" key={title}>{image ? <div className={`output-preview output-shot${label === 'Motion' ? ' is-video' : ''}`}><img src={image} alt={preview} loading="lazy" /></div> : <div className={`output-preview preview-${index - 1}`}><span>{preview}</span></div>}<p>{label}</p><h3>{title}</h3><div>{text}</div></article>)}</div>
+        <div className="output-grid">{outputs.map(([label, title, text, preview, image, previewClass]) => <article className="output-card" key={title}>{image ? <div className={`output-preview output-shot${label === 'Motion' ? ' is-video' : ''}`}><img src={image} alt={preview} loading="lazy" /></div> : <div className={`output-preview ${previewClass ?? ''}`}><span>{preview}</span></div>}<p>{label}</p><h3>{title}</h3><div>{text}</div></article>)}</div>
       </div></section>
 
       <section className="editor-section container">

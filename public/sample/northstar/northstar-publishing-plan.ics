@@ -1,0 +1,149 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Afterword//Publishing plan//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Northstar Advisory publishing plan
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-1@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:Website: Publish the guide and landing page
+DESCRIPTION:Put the landing-page copy live with the guide "The rate the par
+ tners approved is not necessarily the rate clients pay" as the download.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-2@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:Email: Email 1: deliver the guide
+DESCRIPTION:Subject: Your guide to carrying a new rate through
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-3@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:LinkedIn: Post 1
+DESCRIPTION:Last year\, we reviewed 40 pricing changes at services firms.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-4@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:LinkedIn: Post 2
+DESCRIPTION:If I argue for a new rate\, I should write the client explanati
+ on.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-5@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:LinkedIn: Video clip 1
+DESCRIPTION:19 of those 31 Unanimously approved changes that quietly revert
+ ed (figure-clip-01.mp4)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-6@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:Email: Email 2: develop the idea
+DESCRIPTION:Subject: Decide what the first no may change
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-7@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261118
+SUMMARY:LinkedIn: Post 3
+DESCRIPTION:I ask an account lead to say the rate explanation aloud before 
+ the first client call.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-8@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:LinkedIn: Carousel (document post)
+DESCRIPTION:Upload the carousel PDF: Will the approved rate reach the invoi
+ ce?
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-9@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:LinkedIn: Post 4
+DESCRIPTION:The client sentence must answer a client question.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-10@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:LinkedIn: Video clip 2
+DESCRIPTION:The spreadsheet was never the problem. The handover was. (quote
+ -clip-02.mp4)
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-11@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261125
+SUMMARY:LinkedIn: Post 5
+DESCRIPTION:A client asks to keep paying the old rate.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-12@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:LinkedIn: Post 6
+DESCRIPTION:I decide what a first no may change before a client says it.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-13@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:Email: Email 3: invite the next step
+DESCRIPTION:Subject: Planning a rate change?
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-14@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261202
+SUMMARY:LinkedIn: Post 7
+DESCRIPTION:An agreement can show the new rate while an invoice shows somet
+ hing else.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-northstar-1793259019991-15@afterwordmonthly.com
+DTSTAMP:20261029T073044Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:LinkedIn: Post 8
+DESCRIPTION:I put names against the invoice review before announcing a rate
+  change.
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
