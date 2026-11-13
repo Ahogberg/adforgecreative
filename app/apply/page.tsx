@@ -19,12 +19,15 @@ export default function ApplyPage() {
           <p>
             Give us the commercial context and one piece of expert material. Within 24 hours,
             we reply by email with the angle we would develop and a clear fit decision. If it
-            fits, we build your first campaign before you pay anything.
+            fits, we send a free watermarked preview of the first campaign. The full campaign
+            is $499; membership is $1,500 a month after that.
           </p>
           <div className="apply-summary">
             <span>Afterword Monthly</span>
             <strong>$1,500/month</strong>
             <ul>
+              <li>Free watermarked preview from your recording</li>
+              <li>Full first campaign $499, one-time</li>
               <li>One source asset up to 75 minutes</li>
               <li>Designed guide, 8 posts with visuals, a carousel and motion clips</li>
               <li>3 emails and landing-page copy</li>

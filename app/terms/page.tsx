@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SiteFooter, SubpageNav } from '../site-chrome';
 import { brand } from '@/lib/brand';
 
@@ -15,12 +16,12 @@ export default function TermsPage() {
         <p className="section-label">Terms</p>
         <h1>A monthly service with a fixed scope.</h1>
       </div>
-      <p className="hero-side">These terms apply when you start an Afterword Monthly membership. They are written to be read, not to be found later.</p>
+      <p className="hero-side">These terms apply when you buy a first campaign or start an Afterword Monthly membership. They are written to be read, not to be found later.</p>
     </section>
 
     <section className="paper-two">
       <div className="container legal-page">
-        <p className="legal-updated">Last updated 15 October 2026</p>
+        <p className="legal-updated">Last updated 13 November 2026</p>
 
         <section>
           <h2>Who you are working with</h2>
@@ -47,26 +48,27 @@ export default function TermsPage() {
 
         <section>
           <h2>Price and payment</h2>
-          <p>Your first campaign comes before any payment. We build it from a recording you already have and send you the review link. If you decide to continue, your membership starts and the first month is billed then; if you do not, you owe nothing, and the first campaign stays ours: please do not publish or reuse it. This first campaign is offered once per firm, to firms we accept.</p>
-          <p>The founding membership is US$1,500 per month, billed in advance each month through our payment provider. The founding rate stays the same for as long as your membership continues without a break. After the first campaign, production for a month starts once that month’s payment has been received.</p>
+          <p>We start with a free preview, built from a recording you already have: a watermarked guide cover, two to three spreads, and two LinkedIn posts. The preview is ours; please do not publish or reuse it. The preview is offered once per firm, to firms we accept.</p>
+          <p>The full first campaign is a one-time fee of US$499. We send the review link within 48 hours of complete intake, once that payment has been received. If you do not buy the first campaign, you owe nothing, and the campaign stays ours: please do not publish or reuse it.</p>
+          <p>If you continue, the founding membership is US$1,500 per month, billed in advance each month through our payment provider, for one recording a month. The founding rate stays the same for as long as your membership continues without a break. After the first campaign, production for a month starts once that month’s payment has been received.</p>
           <p>Prices exclude any taxes that apply to you, such as VAT or sales tax, which are added where required.</p>
         </section>
 
         <section>
           <h2>Cancelling</h2>
-          <p>There is no minimum term. You can cancel at any time by email; the cancellation takes effect at the end of the month you have paid for, and you are not charged again. Paid months are not refunded once the review link for that month has been sent. If we cannot deliver a month you have paid for, we refund that month in full.</p>
+          <p>There is no minimum term. You can cancel at any time by email; the cancellation takes effect at the end of the month you have paid for, and you are not charged again. The first campaign and paid months are not refunded once the review link for that work has been sent. If we cannot deliver a campaign or month you have paid for, we refund that fee in full.</p>
           <p>We may end the membership with 30 days’ notice, or immediately if payment fails and is not resolved within 14 days, or if a recording would require us to publish unlawful or misleading content.</p>
         </section>
 
         <section>
           <h2>Ownership and use</h2>
-          <p>You keep all rights to your recordings and materials. Once a month is paid for, the finished files we deliver for it are yours to use, edit and publish without restriction or attribution.</p>
+          <p>You keep all rights to your recordings and materials. Once a campaign or month is paid for, the finished files we deliver for it are yours to use, edit and publish without restriction or attribution.</p>
           <p>We keep the right to our templates, design system, software and methods, which are not transferred. Client campaigns are confidential: we never publish your work or name you as a client without your written permission.</p>
         </section>
 
         <section>
           <h2>Your materials and confidentiality</h2>
-          <p>You confirm that you have the right to give us the recordings, logos and other materials you send. We use them only to deliver your membership, keep them confidential, and process personal information as described in our <a href="/privacy">privacy notice</a>. We use carefully selected software providers, including AI services, to transcribe and draft; they process your material only to provide that service to us.</p>
+          <p>You confirm that you have the right to give us the recordings, logos and other materials you send. We use them only to deliver your membership, keep them confidential, and process personal information as described in our <Link href="/privacy">privacy notice</Link>. We use carefully selected software providers, including AI services, to transcribe and draft; they process your material only to provide that service to us.</p>
         </section>
 
         <section>
