@@ -21,7 +21,7 @@ export default function ReviewPage() {
       <aside className="source-panel"><div><small>Source for the highlighted claim</small><h3>Webinar · 18:40–19:55</h3></div><div className="video-placeholder"><i className="play" /></div><div className="transcript"><p><span>18:40</span>So the partner meeting ends, everyone agrees, and what does the account team get? A number and a date.</p><p className="highlight"><span>19:12</span>What they do not get is the why, in words they could say to a client without sounding like a memo.</p><p><span>19:32</span>That is not a training problem. It is a writing problem.</p></div><small>Click any highlighted sentence to jump to its source.</small></aside>
     </div></div></section>
     <section className="paper-two"><div className="container review-steps"><h2>What happens between the recording and the finished files</h2><div className="review-step-grid">{steps.map(([when,title,text]) => <article key={when}><small>{when}</small><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
-    <section className="pricing final-cta"><h2>Want to see your own recording in this view?</h2><p>Apply with a link. Within a day we reply with the angle we would take and whether it is a fit.</p><Link className="button button-inverse" href="/apply">Start without a sales call</Link></section>
+    <section className="pricing final-cta"><h2>Want to see your own recording in this view?</h2><p>Apply with a link. Within a day we reply with the angle we would take and whether it is a fit. If it is, you get a free watermarked preview.</p><Link className="button button-inverse" href="/apply">Start without a sales call</Link></section>
     <SiteFooter note="The review interface shown uses fictional content." />
   </main>;
 }

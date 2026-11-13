@@ -1,3 +1,5 @@
+/* oxlint-disable next/no-img-element -- vinext's next/image shim currently throws during client hydration */
+/* oxlint-disable jsx-a11y/no-noninteractive-tabindex -- the slide strip is a keyboard-scrollable region */
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SiteFooter, SubpageNav } from '../site-chrome';
@@ -75,7 +77,7 @@ export default function SamplePage() {
 
     <section className="paper-two"><div className="container sample-section sample-split"><div className="sample-copy"><p className="section-label">The landing-page copy</p><h2>Labelled blocks, ready to place</h2><p>Delivered with each block labelled, so whoever runs the website can place it without a briefing.</p></div><div className="landing-blocks"><div><span>Eyebrow</span><p>Guide for managing partners</p></div><div><span>Headline</span><p className="landing-headline">The rate the partners approved is not necessarily the rate clients pay</p></div><div><span>Subheadline</span><p>How to prepare the client conversation, decide what the first no may change and check what was invoiced ninety days later.</p></div><div><span>Form heading</span><p>Get the rate-change guide</p></div><div><span>Button</span><p>Download the guide</p></div></div></div></section>
 
-    <section className="pricing final-cta"><h2>Want to see this for your own recording?</h2><p>Send us one webinar. We reply within a day with the guide we would build from it.</p><Link className="button button-inverse" href="/apply">Start without a sales call</Link></section>
+    <section className="pricing final-cta"><h2>Want to see this for your own recording?</h2><p>Send us one webinar. If it is a fit, we send a free watermarked preview of the campaign we would build.</p><Link className="button button-inverse" href="/apply">Start without a sales call</Link></section>
     <SiteFooter note="Client campaigns are confidential and never published. Northstar Advisory, Maya Chen and the figures in this sample are fictional; the files are output from our production system." />
   </main>;
 }

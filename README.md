@@ -1,6 +1,6 @@
 # Afterword
 
-The public site for Afterword Monthly: a $1,500/month productized editorial service for expert-led B2B companies. The repository keeps its original `adforgecreative` name.
+The public site for Afterword Monthly: a productized editorial service for expert-led B2B companies. A free watermarked preview comes first, the full first campaign is $499, and membership is $1,500 a month. The repository keeps its original `adforgecreative` name.
 
 ## Positioning
 
